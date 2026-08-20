@@ -8,7 +8,7 @@ console.log(a-b); //resta
 console.log(a*b); //multiplicación
 console.log(a/b); //división
 console.log(a%b); //modulo 
-console.log(a**b); //
+console.log(a**b); //exponencial
 
 //Particularidad
 
