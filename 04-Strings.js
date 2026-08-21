@@ -19,8 +19,9 @@ console.log(saludo.toLowerCase()) // Minúsculas
 console.log(saludo.indexOf("Hola")) // Índice
 console.log(saludo.indexOf("Diego"))
 console.log(saludo.indexOf("Ricardo"))
-console.log(saludo.includes("Hola")) // Incluye ?
+console.log(saludo.includes("Hola")) // Incluye?
 console.log(saludo.includes("Diego"))
 console.log(saludo.includes("Ricardo"))
 console.log(saludo.slice(0, 10)) // saca una Sección
 console.log(saludo.replace("Diego", "Don Diego")) // Reemplazo
+console.log(saludo.replaceAll(" ", "-")); // Reemplazo de todos los espacios

@@ -90,7 +90,15 @@ console.log(!false);
 console.log(!(5 > 10 && 15 > 20));
 console.log(!(5 > 10 || 15 > 20));
 
-//Operador ternario ?
+//Operador ternario?
 const isRaining = false
 isRaining ? console.log("Está lloviendo") :
 console.log("No esta lloviendo");
+
+// Valores falsos (falsy)
+console.log(Boolean(false)); // false
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean(null)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(NaN)); // false

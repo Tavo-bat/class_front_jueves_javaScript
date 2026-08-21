@@ -55,9 +55,9 @@ console.log(10>5 && 5==5);
 
 console.log(10<5 || 5==5);
 
-console.log(10>5 && 5==5 || 10<5);
+console.log(10>5 && 5==5 || 10<suma);
 
-console.log((5+5)>(3+2) && (55>5));
+console.log((5+5)>(3+2) && (exp>5));
 
 //Ejercicios String
 
@@ -81,4 +81,20 @@ console.log(multiline);
 
 let nombre = "Tavo";
 let saludo = `Hola, mi nombre es ${nombre}`;
-console.log(saludo); 
+console.log(saludo);
+
+let comercio = `La deuda de ${nombre} con la DIAN es grande`;
+console.log(comercio);
+
+console.log(saludo.indexOf("Hola"));
+
+console.log(saludo.replaceAll(" ", "-"));
+
+console.log(saludo.includes("Hola"));
+
+let string1 = "camisa";
+let string2 = "pantalon";
+
+console.log(string1 == string2);
+
+console.log(string1.length == string2.length);
