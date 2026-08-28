@@ -56,3 +56,23 @@ const funcionFlecha2 =(nombre) => console.log(`Hola ${nombre}`);
 
 funcionFlecha1("");
 funcionFlecha2("");
+
+//Con y sin retorno
+
+function cuadrado(num){
+    console.log(`El cuadrado de ${num} es ${num * nuem}`);
+};
+
+cuadrado(4);
+
+let resultado = cuadrado(4);
+    console.log(resultado);
+
+    // con return
+
+    function cuadrado(num){
+        return num * num;
+    }
+    let r = cuadrado(4);
+
+    console.log(r);
