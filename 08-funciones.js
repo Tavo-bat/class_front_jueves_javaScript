@@ -1,4 +1,4 @@
-//Función tradional
+//Función tradional (Declaración)
 
 function funcionTradicional() {
     console.log("hola, que hace?")
@@ -46,7 +46,7 @@ const funcionAnonima = function (name){
 };
 funcionAnonima("Tavo");
 
-//Funciones flecha (arrow function)
+//Funciones flecha (array function)
 
 const funcionFlecha1 = () =>{
     console.log(`Hola`);
