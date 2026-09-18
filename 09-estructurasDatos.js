@@ -143,8 +143,57 @@ console.log(fruit); // 0
 
 numeros = [1, 2, 3, 2, 4, 1, 5];
 console.log(numeros);
-let sinRepetidos = new set(numeros);
+let sinRepetidos = new Set(numeros);
 console.log(sinRepetidos);
 
 let arrayNumeros = Array.from(sinRepetidos);
 console.log(arrayNumeros);
+
+/* Estructuras de datos: Map (Diccionario)
+un Map es una estructura de datos que permite almacenar pares clave-valor. 
+A diferencia de los objetos, las claves en un Map pueden ser de cualquier tipo, 
+incluyendo objetos, funciones y tipos primitivos. Además, los Maps mantienen el orden de inserción de los elementos.*/
+
+let miMapa = new Map(); // Crea un mapa vacío
+
+// Agregar elementos al mapa
+miMapa.set("nombre", "Juan");
+miMapa.set("edad", 30);
+miMapa.set("ciudad", "Bogota");
+
+let estudiante = new Map([
+    ["nombre", "Ana"],
+    ["edad", 25],
+    ["ciudad", "Rionegro"]
+]);
+
+console.log(miMapa);
+console.log(estudiante);
+
+//.set(clave, valor)	Agrega un par clave-valor	miMapa.set("nombre", "Juan")
+//.get(clave)	Obtiene el valor asociado a una clave	miMapa.get("nombre") // "Juan"
+//.has(clave)	Verifica si existe una clave	miMapa.has("edad") // true
+//.delete(clave)	Elimina un par clave-valor	miMapa.delete("ciudad")
+//.clear()	Vacía el Map	miMapa.clear()
+//.size	Cantidad de pares clave-valor	miMapa.size
+
+estudiante.set("profesion", "Ingeniera"); // Agrega un nuevo par clave-valor
+estudiante.set("edad", 26); // Actualiza el valor de la clave "edad"
+
+console.log(estudiante);
+
+estudiante.get("nombre"); // Devuelve "Ana"
+console.log(estudiante.get("nombre"));
+
+console.log(estudiante.keys()); // Devuelve un iterador con las claves
+console.log(estudiante.values()); // Devuelve un iterador con los valores
+
+console.log(estudiante.has("ciudad")); // Devuelve true
+
+estudiante.delete("ciudad");
+console.log(estudiante.has("ciudad")); // Devuelve false
+
+console.log(estudiante.size); // Devuelve 3
+
+estudiante.clear();
+console.log(estudiante.size); // Devuelve 0
