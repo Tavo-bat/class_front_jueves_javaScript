@@ -36,3 +36,15 @@ do{
 
 console.log("Los nombres guardados fueron: " + nombres.length);
 console.log("nombres: " + nombres);
+
+let findName = prompt("Ingresa el nombre que deseas buscar");
+
+if (nombres.includes(findName)){
+    alert(findName + ", Encontrado");
+    document.write(findName + ", si existe en la lista")
+} else{
+    alert(findName + ", no existe");
+}
+
+document.write("<br>Los nombres guardados fueron: " + nombres.length);
+document.write("<br>nombres: " + nombres);
