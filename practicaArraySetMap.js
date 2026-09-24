@@ -130,3 +130,21 @@ if (estuMap.has("Maria")){
     estuMap.set("Maria", 14)
     console.log(estuMap.get("Maria"))
 };
+
+let colEst = new Map([["Juan", 3.5], ["Luis", 4.0], ["Carlos", 3.0], ["Maria", 4.3]]);
+
+for (let nota of colEst) {
+    if (nota[1] > 4.0) {
+        console.log(nota[0]);
+    }
+}
+
+let correos = [
+    "ana@gmail.com",
+    "juan@gmail.com",
+    "ana@gmail.com"
+];
+
+let listaCorreos = new Set(correos);
+
+console.log(listaCorreos.size);
