@@ -6,7 +6,7 @@ let myArray = [1, 2, 3, 4, 5];
 
 let[a, b, c, d, e] = myArray;
 
-console.log(a, b, c, d, e);
+console.log(a, b, c, d, e); // 1 2 3 4 5
 
 let fullStack = [
     ["HTML", "CSS", "JS", "React"],
@@ -61,3 +61,60 @@ let {name, trabajo: {empresa, cargo}} = persona2; // desestructuración de objet
 console.log(name); // Tavo
 console.log(empresa); // CESDE
 console.log(cargo); // Instructor
+
+const paises = [
+    ["Colombia", "Bogotá"],
+    ["Perú", "Lima"],
+    ["Argentina", "Buenos Aires"]
+];
+
+for (let [pais, capital] of paises){
+    console.log(`La capital de ${pais} es ${capital}`);
+} // desestructuración de arrays en un bucle for...of
+
+
+function saludar({nombre, edad}) { // desestructuración de objetos en parámetros de función
+    console.log(`Hola, soy ${nombre} y tengo ${edad} años`);
+}
+
+saludar({
+    nombre: "Tavo",
+    edad: 28
+})
+
+// Propagación-spreading (...)
+
+let arrayNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let [num1, num2, ...resto] = arrayNumeros; // propagación de arrays
+console.log(num1); // 1
+console.log(num2); // 2
+console.log(resto); // [3, 4, 5, 6, 7, 8, 9, 10]
+
+let numerosArray = [11, 12, 13, 14, 15];
+
+let numeros = [...arrayNumeros, ...numerosArray]; // propagación de arrays
+console.log(numeros); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+let arrayNumerosSup = [9, 10,...numerosArray, 16, 17, 18, 19, 20]; // propagación de arrays
+console.log(arrayNumerosSup); // [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+
+let perfil = {
+    nombre: "Tavo",
+    edad: 30,
+    alias: "TavoCa"
+}
+
+let perfilMas = {...perfil, email: "tavo@example.com"}
+console.log(perfilMas);
+
+let suma = (...numeros)=>{
+    let resultado = 0;
+    for (let numero of numeros){
+        resultado+=numero
+    } return resultado
+}
+
+total = suma(5, 6, 10);
+
+console.log(total);
