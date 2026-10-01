@@ -8,7 +8,7 @@ let elementoPorId = document.getElementById("p1");
 
 //console.log(elementoPorId);
 
-elementoPorId.innerHTML = "Parrafo modificado usando getElementById";
+elementoPorId.innerHTML = "Párrafo modificado usando getElementById";
 
 //Modificar estilos
 
@@ -30,7 +30,7 @@ let elementoPorTag = document.getElementsByTagName("p");
 
 //console.log(elementoPorTag);
 
-elementoPorTag[1].innerHTML = "Parrafo modificado usando getElementByIdTagName";
+elementoPorTag[1].innerHTML = "Párrafo modificado usando getElementByIdTagName";
 
 //Obtener elemento por clase
 
@@ -38,7 +38,7 @@ let elementoPorClase = document.getElementsByClassName("parrafo");
 
 //console.log(elementoPorClase)
 
-elementoPorClase[2].innerHTML = "Parrafo modificado con getElementsByClassName";
+elementoPorClase[2].innerHTML = "Párrafo modificado con getElementsByClassName";
 
 //Query Selector
 
@@ -48,7 +48,7 @@ let elementoPorIdQuerySelector = document.querySelector("#p4");
 
 //console.log(elementoPorIdQuerySelector);
 
-elementoPorIdQuerySelector.innerHTML = "Parrafo modificado con querySelector por ID"
+elementoPorIdQuerySelector.innerHTML = "Párrafo modificado con querySelector por ID"
 
 //Elemento por Clase
 
@@ -56,18 +56,29 @@ elementoPorIdQuerySelector.innerHTML = "Parrafo modificado con querySelector por
 
 //console.log(elementoPorClaseQuerySelector);
 
-//elementoPorClaseQuerySelector.innerHTML = "Parrafo modificado con querySelector por Clase"
+//elementoPorClaseQuerySelector.innerHTML = "Párrafo modificado con querySelector por Clase"
 
 let elementoPorClaseQuerySelector = document.querySelectorAll(".parrafo");
 //console.log(elementoPorClaseQuerySelector);
 //console.log(elementoPorClaseQuerySelector.length);
 let mi_array = [...elementoPorClaseQuerySelector];
 
-elementoPorClaseQuerySelector[4].innerHTML = "Parrafo modificado con querySelectorAll por Clase";
+elementoPorClaseQuerySelector[4].innerHTML = "Párrafo modificado con querySelectorAll por Clase";
 
 //Elemento por Etiqueta
 
 elementoPorTagQuerySelector = document.querySelectorAll("p");
 
-elementoPorTagQuerySelector[5].innerHTML = "Parrafo modificado con querySelectorAll por Tag";
+elementoPorTagQuerySelector[5].innerHTML = "Párrafo modificado con querySelectorAll por Tag";
 
+//Adicionar un nuevo parrafo
+
+const elementoPadre = document.querySelector(".padre");
+
+const parrafoSiete = document.createElement("p");
+
+parrafoSiete.innerHTML = "Párrafo 7"
+parrafoSiete.classList.add("parrafo");
+parrafoSiete.setAttribute("id","p7")
+
+elementoPadre.appendChild(parrafoSiete);
