@@ -12,6 +12,7 @@ parrafoOcho.appendChild(textoOcho);
 //Utilizar selectores
 const elementoPadre = document.querySelector(".padre")
 const p1 = document.getElementById("p1");
+const p2 = document.getElementById("p2");
 
 
 //Creacion de nodos
@@ -20,7 +21,7 @@ elementoPadre.append(parrafoOcho, parrafoNueve);
 
 elementoPadre.insertBefore(parrafoCero, p1);
 
-elementoPadre.insertAdjacentElement("afterend", parrafoExtra);
+p2.insertAdjacentElement("beforeend", parrafoExtra);
 
 //1. beforebegin: inserta el elemento antes del elemento padre
 //2. afterbegin: inserta el elemento al inicio del elemento padre
