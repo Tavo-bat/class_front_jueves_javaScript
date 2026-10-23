@@ -1,0 +1,64 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    margin: 0;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+#userInput {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#input-tarea {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+#addBtn {
+    padding: 12px 18px;
+    font-size: 20px;
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btn-agregar:hover {
+    background-color: #444444;
+}
+
+#lista-tareas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#lista-tareas li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    word-break: break-word;
+}

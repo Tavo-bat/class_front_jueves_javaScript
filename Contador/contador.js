@@ -27,6 +27,6 @@ const numeroColor = document.getElementById("numero");
     if (cuenta >= 10) {
         numeroColor.style.color = "green";
     } else {
-        numeroColor.style.color = "red";
+        numeroColor.style.color = "black";
     }
 }
