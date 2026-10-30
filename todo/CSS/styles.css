@@ -57,8 +57,15 @@ h1 {
 }
 
 #lista-tareas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #eee;
-    font-size: 18px;
-    word-break: break-word;
+}
+
+.icono-basura {
+    width: 15px;
+    height: auto;
+
 }

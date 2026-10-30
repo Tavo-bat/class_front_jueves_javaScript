@@ -1,6 +1,6 @@
 const formulario = document.querySelector('#userInput');
 const inputTarea = document.querySelector('input[type="text"]');
-const listaContenedor = document.querySelector('#list');
+const listaContenedor = document.querySelector("#lista-tareas");
 
 formulario.addEventListener('submit', function (evento){
     evento.preventDefault();
@@ -11,5 +11,30 @@ formulario.addEventListener('submit', function (evento){
       alert("Ingrese una nueva tarea.");
       return;
     }
+
+    agregarTareaAlDOM(textoTarea);
+
     inputTarea.value="";
+});
+
+function agregarTareaAlDOM(textoDeTarea){
+  const tareaLi = document.createElement('li')
+  tareaLi.innerHTML = `
+<label>
+  <input type="checkbox">
+  ${textoDeTarea}
+</label>
+<span class="closeBtn"><img src="./img/delete.png" alt="Eliminar" class="icono-basura"></span>
+`;
+tareaLi.classList.add("lista-tarea");
+
+listaContenedor.appendChild(tareaLi)
+}
+
+listaContenedor.addEventListener(`click`, function (event){
+
+  if(event.target.classList.contains(`closeBtn`)){
+    const tarjetaTarea = event.target.parentElement;
+    tarjetaTarea.remove()
+  }
 });
