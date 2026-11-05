@@ -1,6 +1,8 @@
 const formulario = document.querySelector('#userInput');
 const inputTarea = document.querySelector('input[type="text"]');
 const listaContenedor = document.querySelector("#lista-tareas");
+const contadorPendientes = document.querySelector("#contador-pendientes");
+const contadorCompletadas = document.querySelector("#contador-completadas");
 
 formulario.addEventListener('submit', function (evento){
     evento.preventDefault();
@@ -33,8 +35,8 @@ listaContenedor.appendChild(tareaLi)
 
 listaContenedor.addEventListener(`click`, function (event){
 
-  if(event.target.classList.contains(`closeBtn`)){
-    const tarjetaTarea = event.target.parentElement;
+  if(event.target.closest(`.icono-basura`)){
+    const tarjetaTarea = event.target.closest(`.lista-tarea`);
     tarjetaTarea.remove()
   }
 });

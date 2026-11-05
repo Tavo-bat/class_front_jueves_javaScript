@@ -17,11 +17,20 @@
           id="input-tarea"
           placeholder="Agregar una tarea..."
           autofocus
-        >
-        <input type="submit" value="+" id="addBtn">
+        />
+        <input type="submit" value="+" id="addBtn" />
       </form>
       <ul id="lista-tareas"></ul>
-      <div id="list" class="list-container"></div>
+      <div class="panel-estadisticas">
+        <p class="contador-item">
+          Tareas pendientes:
+          <span id="contador-pendientes" class="numero-conteo">0</span>
+        </p>
+        <p class="contador-item">
+          Tareas completadas:
+          <span id="contador-completadas" class="numero-conteo">0</span>
+        </p>
+      </div>
     </div>
   </body>
 </html>

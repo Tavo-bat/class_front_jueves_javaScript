@@ -69,3 +69,23 @@ h1 {
     height: auto;
 
 }
+
+.panel-estadisticas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.contador-item {
+  margin: 0;
+}
+
+.numero-conteo {
+  font-weight: bold;
+  color: #222222;
+}
