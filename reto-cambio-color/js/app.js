@@ -6,9 +6,9 @@
 //  - querySelector('#id') recibe un selector CSS (con el #).
 //  - getElementById('id') recibe solo el id (sin el #).
 
-const botonColor = null;   // TODO 1: selecciona el botón con id "boton-color".
-const botonFiesta = null;  // TODO 2: selecciona el botón con id "boton-fiesta".
-const textoColor = null;   // TODO 3: selecciona el párrafo con id "color".
+const botonColor = document.querySelector('#boton-color'); // TODO 1: selecciona el botón con id "boton-color".
+const botonFiesta = document.querySelector('#boton-fiesta');  // TODO 2: selecciona el botón con id "boton-fiesta".
+const textoColor = document.querySelector('#color');   // TODO 3: selecciona el párrafo con id "color".
 
 
 // ============================================
@@ -22,10 +22,11 @@ function generarColorHexAleatorio() {
   let color = '#';
 
   for (let i = 0; i < 6; i++) {
+    const indice = Math.floor(Math.random() * 16);
+    color += digitos[indice];
     // TODO 4: escoge un índice aleatorio entre 0 y 15.
     //   Pista: Math.floor(Math.random() * 16) da un entero entre 0 y 15.
     // const indice = ...;
-
     // TODO 5: agrega a 'color' el carácter que está en la posición 'indice' de 'digitos'.
     //   Pista: digitos[indice] devuelve un carácter. Se suma con +=.
   }
@@ -47,6 +48,12 @@ function generarColorHexAleatorio() {
 
 // TODO 6: escribe aquí tu addEventListener.
 
+botonColor.addEventListener('click', (evento) => {
+const colorAleatorio = generarColorHexAleatorio();
+document.body.style.backgroundColor = colorAleatorio;
+textoColor.textContent = colorAleatorio;
+botonColor.style.backgroundColor = colorAleatorio;
+})
 
 // ============================================
 // RETO 3: MODO FIESTA CON INTERVALOS
@@ -65,6 +72,22 @@ function generarColorHexAleatorio() {
 let fiestaActiva = false;  // ¿la fiesta está encendida?
 let idIntervalo = null;    // aquí guardas el id que devuelve setInterval
 
+if (!fiestaActiva) {
+fiestaActiva = true;
+botonFiesta.textContent = 'Parar fiesta';
+idIntervalo = setInterval(
+  () => {
+    const colorFiesta = generarColorHexAleatorio();
+    document.body.style.backgroundColor = colorFiesta;
+    textoColor.textContent = colorFiesta;
+  }, 500)
+}
+else {
+  clearInterval(idIntervalo);
+  idIntervalo = null;
+  fiestaActiva = false;
+  botonFiesta.textContent = 'Modo fiesta';
+}
 // TODO 7: escribe el addEventListener de botonFiesta.
 //   Si la fiesta NO está activa: activa la variable, cambia el texto del botón,
 //   y guarda en idIntervalo el resultado de setInterval.
