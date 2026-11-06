@@ -15,6 +15,7 @@ formulario.addEventListener('submit', function (evento){
     }
 
     agregarTareaAlDOM(textoTarea);
+    actualizarEstadisticas();
 
     inputTarea.value="";
 });
@@ -31,12 +32,24 @@ function agregarTareaAlDOM(textoDeTarea){
 tareaLi.classList.add("lista-tarea");
 
 listaContenedor.appendChild(tareaLi)
-}
+};
 
 listaContenedor.addEventListener(`click`, function (event){
 
-  if(event.target.closest(`.icono-basura`)){
+  if (event.target.type === `checkbox`) {
+    actualizarEstadisticas();
+  }else if(event.target.closest(`.icono-basura`)){
     const tarjetaTarea = event.target.closest(`.lista-tarea`);
     tarjetaTarea.remove()
+    actualizarEstadisticas();
   }
 });
+
+function actualizarEstadisticas() {
+  const totalTareas = document.querySelectorAll('#lista-tareas li').length;
+  const completadas = document.querySelectorAll('#lista-tareas input[type="checkbox"]:checked').length;
+  const pendientes = totalTareas - completadas;
+
+  contadorPendientes.textContent = pendientes;
+  contadorCompletadas.textContent = completadas;
+};

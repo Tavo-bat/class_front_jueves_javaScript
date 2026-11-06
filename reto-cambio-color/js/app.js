@@ -70,3 +70,8 @@ let idIntervalo = null;    // aquí guardas el id que devuelve setInterval
 //   y guarda en idIntervalo el resultado de setInterval.
 //   Si la fiesta SÍ está activa: detén el intervalo, desactiva la variable
 //   y vuelve a cambiar el texto del botón.
+
+
+setTimeout(function() {
+  console.log()
+})
