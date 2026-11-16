@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/registro.js" defer></script>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Crear Cuenta</h2>
+        <form id="formRegistro">
+            <div class="campo">
+                <label>Nombre Completo:</label>
+                <input type="text" id="nombre" placeholder="Ej. Ana Pérez">
+            </div>
+            <div class="campo">
+                <label>Correo Electrónico:</label>
+                <input type="email" id="correo" placeholder="ana@correo.com">
+            </div>
+            <div class="campo">
+                <label>Contraseña:</label>
+                <input type="password" id="password" placeholder="••••••••">
+            </div>
+            <button type="submit" id="btnRegistro">Registrarse</button>
+        </form>
+        <p id="mensajeEstado" class="mensaje"></p>
+    </div>
+</body>
+
+</html>

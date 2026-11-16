@@ -72,6 +72,7 @@ botonColor.style.backgroundColor = colorAleatorio;
 let fiestaActiva = false;  // ¿la fiesta está encendida?
 let idIntervalo = null;    // aquí guardas el id que devuelve setInterval
 
+botonFiesta.addEventListener('click', () => {
 if (!fiestaActiva) {
 fiestaActiva = true;
 botonFiesta.textContent = 'Parar fiesta';
@@ -88,6 +89,7 @@ else {
   fiestaActiva = false;
   botonFiesta.textContent = 'Modo fiesta';
 }
+});
 // TODO 7: escribe el addEventListener de botonFiesta.
 //   Si la fiesta NO está activa: activa la variable, cambia el texto del botón,
 //   y guarda en idIntervalo el resultado de setInterval.

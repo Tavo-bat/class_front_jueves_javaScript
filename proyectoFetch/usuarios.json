@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana Torres",
+    "email": "ana@correo.com",
+    "password": "1234"
+  },
+  {
+    "id": 2,
+    "nombre": "Carlos Ruiz",
+    "email": "carlos@correo.com",
+    "password": "abcd"
+  },
+  {
+    "id": 3,
+    "nombre": "María López",
+    "email": "maria@correo.com",
+    "password": "pass1"
+  }
+]
+
