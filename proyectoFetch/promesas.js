@@ -23,8 +23,8 @@
 async function cargarUsuarios() {
     try{
         const respuesta = await fetch(`usuarios.json`)
-        const usaurios = await respuesta.json()
-        console.log(`Los usuario recuperados del .json son: `, Usuarios)
+        const usuarios = await respuesta.json()
+        console.log(`Los usuario recuperados del .json son: `, usuarios)
 
     }catch(error){
         console.error(error)
